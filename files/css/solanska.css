@@ -6,12 +6,24 @@ body {
 }
   
 h5 {
-text-decoration: underline ;
+  text-decoration: underline ;
+}
+
+sup {
+  font-size : 60%;
+}
+
+ul{
+  list-style-type: disc;
+}
+
+.text-sedy {
+  color: #999999;
 }
 
 .justify {
-  text-align:justify;
-  text-justify:inter-word;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .kapitalky {
@@ -20,6 +32,10 @@ text-decoration: underline ;
   font-variant: small-caps;
   color: #800000 ; 
   margin-right: 10px;
+}
+
+.no-disc{
+  list-style-type: none;
 }
 
 .jumbotron {
@@ -31,103 +47,124 @@ text-decoration: underline ;
   background:    -moz-radial-gradient(circle,	#dc143c 0%, #800000 100%);
 }
 
-#sluzby {
-   margin-bottom: 100px;
-   padding-top:40px;
-}
 
-#reference {
-   margin-bottom: 180px;
-   padding-top:40px;
-}
+/* ---------------------------- horní lišta */
 
-#kontakt {
-   padding-top:40px;
-
-}
-sup {
-size: 60%}
-
-#reference > #dl-horizontal > .container {
- block: center
-}
- 
-#citace {
-  margin-left: 120px;
-  margin-right: 120px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-#reference a {
-  text-decoration:none;
-  color: #333333; 
-} 
-
-#reference .kapitalky a {
-  color: #800000; 
-  text-decoration:none;
-}
-
-#kontakt .kapitalky {
-  color:  #dc143c ; 
-  font-size: 14px;
-}
-
-.dl-horizontal dt {
-  width:200px;
-}
-
-footer {
-  background-color: #222222;
-  border-color: #080808;
-  color: #999999;
-  font-size: 14px;
-}
-.modal-footer {
-  text-align: left;
-   margin: 0px;
+  #tel span {
+    -webkit-transition: all 0s;  /* Saf3.2+, Chrome */
+    -moz-transition: all 0s;  /* FF4+ */
+    -ms-transition: all 0s;  /* IE10 */
+    -o-transition: all 0s;  /* Opera 10.5+ */
+    transition: all 0s;
+    background-color: inherit;
+    color: inherit;
   }
 
-footer address {
-  font-size: 16px;
-  padding-top: 20px;
-}
+  #tel span:hover,
+  #tel span:focus,
+  #tel span:active {
+    color: #fff ;
+  }
 
-footer > .container-kontakt {
-  padding-left:45px;
-  padding-right:45px;
-  block: center;
-}
 
-.transition-example div {
-  -webkit-transition: all 1s;  /* Saf3.2+, Chrome */
-  -moz-transition: all 1s;  /* FF4+ */
-  -ms-transition: all 1s;  /* IE10 */
-  -o-transition: all 1s;  /* Opera 10.5+ */
-  transition: all 1s;
-  background-color: #fffafa;
-  color: inherit;
-  padding: 5px;
 
-}
+/* ---------------------------- služby */
+  #sluzby {
+    margin-bottom: 60px;
+    padding-top:40px;
+  }
 
-#map-canvas {
-  height:200px; 
-  width:200px;
-}
+  .transition-example div {
+    -webkit-transition: all 1s;  /* Saf3.2+, Chrome */
+    -moz-transition: all 1s;  /* FF4+ */
+    -ms-transition: all 1s;  /* IE10 */
+    -o-transition: all 1s;  /* Opera 10.5+ */
+    transition: all 1s;
+    background-color: #fffafa;
+    color: inherit;
+    padding: 5px;
+  }
 
-.transition-example div:hover,
-.transition-example div:focus,
-.transition-example div:active {
-  color: #800000 ;
-}
+  .transition-example div:hover,
+  .transition-example div:focus,
+  .transition-example div:active {
+    color: #800000 ;
+  }
 
-#paticka {
-margin-top: 40px;
-}
-#paticka a {
-  text-decoration:none;
-  color: #999999;
-}
+/* ---------------------------- reference */
+  #reference {
+    margin-bottom: 140px;
+    padding-top:40px;
+  }
 
+  #citace {
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  #reference a {
+    text-decoration:none;
+    color: #333333; 
+  } 
+
+  #reference .kapitalky a {
+    color: #800000; 
+    text-decoration:none;
+  }
+
+/* ---------------------------- footer */
+  footer {
+    background-color: #222222;
+    border-color: #080808;
+    color: #999999;
+    font-size: 14px;
+  }
+
+  .modal-footer {
+    text-align: left;
+    margin: 0px;
+    }
+
+  footer address {
+    font-size: 16px;
+    padding-top: 20px;
+  }
+
+  footer > .container-kontakt {
+    padding-left:45px;
+    padding-right:45px;
+  }
+
+  #kontakt {
+    padding-top:40px;
+  }
+
+  #kontakt .kapitalky {
+    color:  #dc143c ; 
+    font-size: 14px;
+  }
+
+  .dl-horizontal dt {
+    width:200px;
+  }
+
+  #map-canvas {
+    height:200px; 
+    width:200px;
+  }
+
+/* ---------------------------- paticka */
+  #paticka {
+    margin-top: 40px;
+  }
+
+  #paticka a {
+    color: #999999;
+    text-decoration:none;
+  }
+
+  #paticka a:hover {
+    color: #fff;
+  }
