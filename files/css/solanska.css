@@ -47,6 +47,11 @@ ul{
   background:    -moz-radial-gradient(circle,	#dc143c 0%, #800000 100%);
 }
 
+.jumbotron a {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 /* ---------------------------- horní lišta */
 
@@ -151,8 +156,8 @@ ul{
   }
 
   #map-canvas {
-    height:200px; 
-    width:200px;
+    height:225px; 
+    width:225px;
   }
 
 /* ---------------------------- paticka */
