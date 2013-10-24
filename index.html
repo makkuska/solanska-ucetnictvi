@@ -66,7 +66,8 @@
           <p>Pracuji v oboru ekonomika a účetnictví již od roku 1992. 
           V roce 2010 jsem se rozhodla, že zúročím své znalosti v dané oblasti 
           a začala jsem na základě živnostenského oprávnění nabízet své služby firmám jako externí účetní. <br />
-          Vše zpracovávám dle platných legislativních zákonů, sleduji změny v legislativě a pravidelně se účastním školení. <br />
+          Vše zpracovávám dle platných legislativních zákonů, sleduji změny v legislativě a pravidelně se účastním školení. 
+          </p><p>
           K ošetření všech daňových otazníků spolupracuji s daňovým poradcem 
           <a href="http://www.hledat.cz/detail-nabidky/580748-ing-jiri-nigrin-danovy-poradce"  target="_blank">Ing. Jiřím Nigrinem.
             <sup><span class="glyphicon glyphicon-new-window"></span></sup></a></p>
@@ -203,47 +204,86 @@
     </div> <!-- div reference -->
 
     <footer id="kontakt" class="modal-footer">
-      <div class="container">
+          <div class="container container-kontakt">
         <h3>Kontakt</h3>
-          <div class="container-kontakt">
-            <address class="col-lg-6">
-              <dl class="dl-horizontal">
-                <dt><span class="kapitalky"></span></dt>
-                <dd>Jana Solanská</dd>
-                <dt><span class="kapitalky">adresa</span></dt> 
-                <dd>Hamerská 15</dd>
-                <dt><span class="kapitalky"></span></dt>
-                <dd>756 54 Zubří</dd>
-                <dt><span class="kapitalky">tel.</span></dt> 
-                <dd>+420 724 063 868</dd>
-                <dt><span class="kapitalky">e-mail</span></dt>
-                <dd><a href="mailto:jana.solanska@gmail.com">jana.solanska@gmail.com</a></dd>
-                <dt><span class="kapitalky">IČ</span></dt>
-                <dd>75375184</dd>
-              </dl>
-            </address>
-            <div id="map-canvas" ></div>
-              <script type="text/javascript">
-              var center = SMap.Coords.fromWGS84(18.0917572, 49.4630311);
-              var m = new SMap(JAK.gel("map-canvas"), center, 14);
-              m.addDefaultLayer(SMap.DEF_BASE).enable();
-              m.addDefaultControls();
+            <div class="col-lg-4">
+              <address>
+                <dl class="dl-horizontal">
+                  <dt><span class="kapitalky"></span></dt>
+                  <dd>Jana Solanská</dd>
+                  <dt><span class="kapitalky">adresa</span></dt> 
+                  <dd>Hamerská 15</dd>
+                  <dt><span class="kapitalky"></span></dt>
+                  <dd>756 54 Zubří</dd>
+                  <dt><span class="kapitalky">tel.</span></dt> 
+                  <dd>+420 724 063 868</dd>
+                  <dt><span class="kapitalky">e-mail</span></dt>
+                  <dd><a href="mailto:jana.solanska@gmail.com">jana.solanska@gmail.com</a></dd>
+                  <dt><span class="kapitalky">IČ</span></dt>
+                  <dd>75375184</dd>
+                </dl>
+              </address>
+            </div>
+            <div class="col-lg-3">
+              <div id="map-canvas" ></div>
+                <script type="text/javascript">
+                var center = SMap.Coords.fromWGS84(18.0917572, 49.4630311);
+                var m = new SMap(JAK.gel("map-canvas"), center, 14);
+                m.addDefaultLayer(SMap.DEF_BASE).enable();
+                m.addDefaultControls();
 
-              var layer = new SMap.Layer.Marker();
-              m.addLayer(layer);
-              layer.enable();
+                var layer = new SMap.Layer.Marker();
+                m.addLayer(layer);
+                layer.enable();
 
-              var options = {};
-              var marker = new SMap.Marker(center, "Solanska", options);
-              layer.addMarker(marker);</script>
+                var options = {};
+                var marker = new SMap.Marker(center, "Solanska", options);
+                layer.addMarker(marker);</script>
+            </div>
+            <div class="col-lg-5">
+              <div id="kontakt_nas" class="container">
+                <h4>Kontaktujte mne</h4>
+                <form action="http://tools.ic.cz/mailform.php" method="post" class="form-horizontal" role="form">
+                  <input type="hidden" name="_PRO_" value="solanskysro@ic.cz" />
+                  <input type="hidden" name="_ODESLANO_" value="true" />
+                  <div class="form-group">
+                    <label for="odesilatel_mail" class="col-lg-3 control-label">Váš email:</label>         
+                    <div class="col-lg-9">   
+                      <input type="email" name="_ODESILATEL_" id="odesilatel_mail" 
+                      size="30" maxlength="30" class="form-control" placeholder="zadejte email" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="predmet"  class="col-lg-3 control-label">Předmět:</label></td>
+                    <div class="col-lg-9">   
+                      <input type="text" name="_PREDMET_" id="predmet" size="30" maxlength="60" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="vzkaz" class="col-lg-3 control-label">Vaše zpráva:</label></td>
+                    <div class="col-lg-9">   
+                      <textarea id="vzkaz"cols="33" rows="2" name="text" class="form-control"></textarea>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-md-3 col-md-offset-3 col-lg-3 col-lg-offset-3">   
+                      <input type="hidden" name="_RETURN_SITE_" value="http://www.solanskysro.cz/#" />
+                      <input type="submit" class="btn btn-info" />
+                    </div>
+                  </div>
+                </form>
+              </div><!--kontakt_nas -->
+            </div>
+            
           </div> <!-- div container-kontakt -->
+    
           <div id="paticka" class="container text-sedy">
             <p>
               <a href="mailto:jana.solanska@gmail.com">&copy; 2013 Jana Solanská</a> &nbsp;|&nbsp; 
               <a href="mailto:magiess@volny.cz">design&amp;code: magiess</a>
             </p>
-          </div> <!--div patička -->
-      </div> <!-- div container -->
+          </div> <!--div paticka -->
+
     </footer> <!-- div kontakt -->
 
   </body>

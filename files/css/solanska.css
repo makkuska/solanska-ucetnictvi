@@ -16,6 +16,10 @@ sup {
 ul{
   list-style-type: disc;
 }
+  
+.dl-horizontal dt {
+    width:200px;
+}
 
 .text-sedy {
   color: #999999;
@@ -138,31 +142,62 @@ ul{
   }
 
   footer > .container-kontakt {
-    padding-left:45px;
-    padding-right:45px;
+    padding-left:0px;
+    padding-right:0px;
   }
 
   #kontakt {
     padding-top:40px;
   }
 
+  #kontakt_nas h4 {
+    color:  #dc143c ; 
+  }
+  .btn-info {
+    background-color:  #dc143c ; 
+    border-color:  #dc143c;
+  }
+  .btn-info.active, .btn-info:active, .btn-info:focus, .btn-info:hover {
+    background-color: #cd5d6c; 
+    border-color: #cd5d6d
+  }
+  
   #kontakt .kapitalky {
     color:  #dc143c ; 
     font-size: 14px;
   }
 
-  .dl-horizontal dt {
-    width:200px;
+  #kontakt .dl-horizontal dt {
+    width:100px;
+  }
+  
+  #kontakt .dl-horizontal dd {
+    margin-left:80px;
   }
 
   #map-canvas {
-    height:225px; 
-    width:225px;
+    height:239px; 
+    width:263px;
+    border-color: #cd5d6c;
+    border-width: 2px;
   }
 
+  label {
+    font-weight: normal;
+  }
+  .form-control {
+    padding: 3px 6px;
+  }
+  .form-group {
+    margin-bottom: 9px;
+  }
+
+  #kontakt_nas {
+    font-size: 14px;
+  }
 /* ---------------------------- paticka */
   #paticka {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   #paticka a {
