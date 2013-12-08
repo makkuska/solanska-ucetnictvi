@@ -1,10 +1,26 @@
 /* stylesheet for solanska.eu, M. Solanská 2013 */
 body {
   padding-top: 20px;
-  background-color: #fffafa;
+  background-color: #fff;
   padding-bottom: 0px;
 }
   
+.jumbotron h1 {
+  font-size: 54px;
+}
+.jumbotron h2 {
+  font-size: 28px;
+}
+.jumbotron p {
+  font-size: 19px;
+}
+h3 {
+  font-size: 26px;
+}
+h4 {
+  font-size: 20px;
+}
+
 h5 {
   text-decoration: underline ;
 }
@@ -31,31 +47,33 @@ ul{
 }
 
 .kapitalky {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
   font-variant: small-caps;
-  color: #800000 ; 
+  color: #990000 ; 
   margin-right: 10px;
-}
+  }
 
 .no-disc{
   list-style-type: none;
 }
 
 .jumbotron {
+  padding-bottom: 20px;
+  padding-top: 30px;
+  margin-bottom: 0px;
   color: #ffffff;
-  background: #dc143c; /* Old browsers */
-  background: -webkit-radial-gradient(circle,  #dc143c 0%,#800000 100%); /* Chrome10+,Safari5.1+ */
-  background:      -o-radial-gradient(circle, #dc143c 0%, #800000 100%); /* Opera 12+ */
-  background:         radial-gradient(circle, #dc143c 0%,#800000 100%); /* W3C */  /* Firefox 3.6+ */
-  background:    -moz-radial-gradient(circle,	#dc143c 0%, #800000 100%);
+  background: #990000; /* Old browsers */
+  background: -webkit-radial-gradient(circle,  #cc3333 0%,#A60000 100%); /* Chrome10+,Safari5.1+ */
+  background:      -o-radial-gradient(circle, #cc3333 0%, #990000 100%); /* Opera 12+ */
+  background:         radial-gradient(circle, #cc3333 0%,#990000 100%); /* W3C */  /* Firefox 3.6+ */
+  background:    -moz-radial-gradient(circle,	#cc3333 0%, #990000 100%);
 }
 
 .jumbotron a {
   color: #fff;
   text-decoration: none;
 }
-
 
 /* ---------------------------- horní lišta */
 
@@ -75,35 +93,24 @@ ul{
     color: #fff ;
   }
 
-
-
 /* ---------------------------- služby */
-  #sluzby {
-    margin-bottom: 60px;
-    padding-top:40px;
-  }
 
-  .transition-example div {
-    -webkit-transition: all 1s;  /* Saf3.2+, Chrome */
-    -moz-transition: all 1s;  /* FF4+ */
-    -ms-transition: all 1s;  /* IE10 */
-    -o-transition: all 1s;  /* Opera 10.5+ */
-    transition: all 1s;
-    background-color: #fffafa;
+  .pozadi_reference {
     color: inherit;
-    padding: 5px;
+    background-color: #d1a9a9;
   }
 
-  .transition-example div:hover,
-  .transition-example div:focus,
-  .transition-example div:active {
-    color: #800000 ;
+  #sluzby {
+    margin-bottom: 0px;
+    padding-top:0px;
+    color: #990000;
   }
+  
 
 /* ---------------------------- reference */
   #reference {
-    margin-bottom: 140px;
-    padding-top:40px;
+    margin-bottom: 0px;
+    padding-top:0px;
   }
 
   #citace {
@@ -115,11 +122,11 @@ ul{
 
   #reference a {
     text-decoration:none;
-    color: #333333; 
+    color: #222222; 
   } 
 
   #reference .kapitalky a {
-    color: #800000; 
+    color: #990000; 
     text-decoration:none;
   }
 
@@ -138,48 +145,70 @@ ul{
 
   footer address {
     font-size: 16px;
-    padding-top: 20px;
+    padding-top: 0px;
   }
+
 
   footer > .container-kontakt {
     padding-left:0px;
     padding-right:0px;
   }
-
+  .modal-footer {
+    border-top: 0px solid #E5E5E5;
+  }
   #kontakt {
-    padding-top:40px;
+    padding-top:0px;
+    padding-bottom:0px;
   }
 
-  #kontakt_nas h4 {
-    color:  #dc143c ; 
+  #kontakt h4 {
+    color:  #bf3030; 
+  }
+
+  #kontakt .kapitalky {
+    color:  #bf3030; 
   }
   .btn-info {
-    background-color:  #dc143c ; 
-    border-color:  #dc143c;
+    background-color:  #bf3030; 
+    border-color:  #bf3030;
   }
   .btn-info.active, .btn-info:active, .btn-info:focus, .btn-info:hover {
-    background-color: #cd5d6c; 
-    border-color: #cd5d6d
+    background-color: #ff7373; 
+    border-color: #ff7373;
   }
   
-  #kontakt .kapitalky {
-    color:  #dc143c ; 
-    font-size: 14px;
+  .btn-default {
+    background-color: #222222;
+    border-color: #222222;
+    color: #999999;
+  }
+  .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover {
+    background-color: #696969;
+    border-color: #222222;
+    color: #ffffff;
   }
 
   #kontakt .dl-horizontal dt {
-    width:100px;
+    width:80px;
   }
   
   #kontakt .dl-horizontal dd {
-    margin-left:80px;
+    margin-left:60px;
+    font-size: 17px;
   }
 
   #map-canvas {
-    height:239px; 
+    height:210px; 
     width:263px;
     border-color: #cd5d6c;
     border-width: 2px;
+    position: relative;
+    left: -20px;
+
+  }
+  footer #kdemenajdete{
+    position: relative;
+    left: -20px;
   }
 
   label {
