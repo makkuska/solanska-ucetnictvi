@@ -114,8 +114,8 @@ ul{
   }
 
   #citace {
-    margin-left: 120px;
-    margin-right: 120px;
+   /* margin-left: 120px;
+    margin-right: 120px;*/
     margin-top: 40px;
     margin-bottom: 40px;
   }
@@ -189,17 +189,17 @@ ul{
   }
 
   #kontakt .dl-horizontal dt {
-    width:80px;
+    width:30%;
   }
   
   #kontakt .dl-horizontal dd {
-    margin-left:60px;
+    margin-left:32%;
     font-size: 17px;
   }
 
   #map-canvas {
     height:210px; 
-    width:263px;
+    width:100%;
     border-color: #cd5d6c;
     border-width: 2px;
     position: relative;

@@ -39,35 +39,38 @@
       </div> <!-- div container -->
     </div> <!-- div navigator -->
     <?php
+      //seznam mailů, na které se zpráva odesílá
+      $email = 'solanska@solanska.eu,marketa.solanska@gmail.com';
+      //proměnné naplněné z formuláře
+      $zprava = $_POST['zprava'];
+      $predmet = $_POST['predmet'];
+      $odesilatel = $_POST['odesilatel_mail'];
+      
+      $pr = "Dotaz z webu: $predmet";
 
-    $email = 'solanska@solanska.eu,marketa.solanska@gmail.com';
-    $zprava = $_POST['zprava'];
-    $predmet = $_POST['predmet'];
-    $pr = "Dotaz z webu: $predmet";
-    $odesilatel = $_POST['odesilatel_mail'];
+      //hlavicka
+        $hlavicka = "From:$odesilatel\n";
+        $hlavicka .= "Subject:$pr\n";
+        $hlavicka .= "MIME-Version: 1.0\n";
+        // způsob kódování
+        $hlavicka .= "Content-Transfer-Encoding: QUOTED-PRINTABLE\n"; 
+        $hlavicka .= "X-Mailer: PHP\n";
+        $hlavicka .= "Content-Type: text/plain; charset=UTF-8\n"; // Kódování
+  
+      // formát zprávy pro solanska@solanska.eu
+      $zp = 'Předmět zprávy: ' . $predmet . "\n" . 'Text zprávy: ' . $zprava;
+      
+      //kopie emailu pro odesílatele dotazu
+      $zp_prijemce = 'Vaše zpráva, kterou jste odeslali přes web www.solanska.eu:' . "\n" .$zprava;
+      mail($odesilatel, 'Kopie zprávy z webu www.solanska.eu', $zp_prijemce, $hlavicka);
 
-    //hlavicka
-    $hlavicka = "From:$odesilatel\n";
-    $hlavicka .= "Subject:$pr\n";
-    $hlavicka .= "MIME-Version: 1.0\n";
-    // způsob kódování
-    $hlavicka .= "Content-Transfer-Encoding: QUOTED-PRINTABLE\n"; 
-    $hlavicka .= "X-Mailer: PHP\n";
-    $hlavicka .= "Content-Type: text/plain; charset=UTF-8\n"; // Kódování
-    // formát zprávy pro solanska@solanska.eu
-    $zp = 'Předmět zprávy: ' . $predmet . "\n" . 'Text zprávy: ' . $zprava;
-    // formát zprávy pro odesílatele dotazu 
-    $zp_prijemce = 'Vaše zpráva, kterou jste odeslali přes web solanska.eu: ' .$zprava;
-    
-    //kopie emailu odesílatele
-    mail($odesilatel, 'Kopie zprávy z webu solanska.eu', $zp_prijemce, $hlavicka);
+      //mail na solanska@solanska.eu
+      $vysledek = mail($email, $pr, $zprava, $hlavicka);
 
-    //mail na solanska@solanska.ei
-    $vysledek = mail($email, 'Dotaz z webu solanska.eu', $zp, $hlavicka);
-    if ($vysledek)
-        echo('<br /><div class="jumbotron"><div class="container"><p>Váš mail byl úspěšně odeslán. Děkujeme za vaši zprávu či dotaz.</><p> Po přečtení se Vám budeme snažit, co nejdříve odpovědět na mail, který jste zadali ' . '('.$odesilatel.').</p><p><a class="btn btn-default" href="http://www.solanska.eu">Zpět na solanska.eu</a></p></div></div>');
-      else
-        echo('<br /><div class="jumbotron"><div class="container"><p>Omlouváme se, někde nastala chyba. Váš e-mail nebyl odeslán. </p><p>Zkuste zadat požadavek znovu, zkontrolujte, že jste vyplnili všechny kolonky. V případě, že to stále nepůjde, kontaktujte nám přímo na e-mailu solanska@solanska.eu nebo na telefonním čísle 724 063 868. Děkujeme za pochopení.</p><p><a class="btn btn-default" href="http://www.solanska.eu">Zpět na solanska.eu</a></p></div></div>');
+      if ($vysledek)
+          echo('<br /><div class="jumbotron"><div class="container"><p>Váš mail byl úspěšně odeslán. Děkujeme za vaši zprávu či dotaz.</><p> Po přečtení se Vám budeme snažit, co nejdříve odpovědět na mail, který jste zadali ' . '('.$odesilatel.').</p><p><a class="btn btn-default" href="http://www.solanska.eu">Zpět na solanska.eu</a></p></div></div>');
+        else
+          echo('<br /><div class="jumbotron"><div class="container"><p>Omlouváme se, někde nastala chyba. Váš e-mail nebyl odeslán. </p><p>Zkuste zadat požadavek znovu, zkontrolujte, že jste vyplnili všechny kolonky. V případě, že to stále nepůjde, kontaktujte nám přímo na e-mailu solanska@solanska.eu nebo na telefonním čísle 724 063 868. Děkujeme za pochopení.</p><p><a class="btn btn-default" href="http://www.solanska.eu">Zpět na solanska.eu</a></p></div></div>');
     ?>
 </body>
 </html>
