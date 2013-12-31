@@ -8,18 +8,28 @@ body {
 .jumbotron h1 {
   font-size: 54px;
 }
+
+img {
+  width: 50%;
+}
+
 .jumbotron h2 {
   font-size: 28px;
 }
+
 .jumbotron p {
   font-size: 19px;
 }
+
 h3 {
   font-size: 26px;
+  font-variant: small-caps;
 }
+
 h4 {
   font-size: 20px;
 }
+
 
 h5 {
   text-decoration: underline ;
@@ -75,6 +85,11 @@ ul{
   text-decoration: none;
 }
 
+#zamest {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
 /* ---------------------------- horní lišta */
 
   #tel span {
@@ -103,8 +118,19 @@ ul{
   #sluzby {
     margin-bottom: 0px;
     padding-top:0px;
+    color: #000;
+  }
+  
+  #sluzby h3 {
     color: #990000;
   }
+    
+  #sluzby h4 {
+    font-variant: small-caps;
+    color: #990000;
+    font-size:22px;
+  }
+
   
 
 /* ---------------------------- reference */
@@ -163,6 +189,9 @@ ul{
 
   #kontakt h4 {
     color:  #bf3030; 
+    font-variant: small-caps;
+    font-size:22px;
+  
   }
 
   #kontakt .kapitalky {
