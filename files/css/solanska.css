@@ -3,33 +3,23 @@ body {
   padding-top: 20px;
   background-color: #fff;
   padding-bottom: 0px;
+  color: #000;
 }
   
-.jumbotron h1 {
-  font-size: 54px;
-}
-
 img {
   width: 50%;
-}
-
-.jumbotron h2 {
-  font-size: 28px;
-}
-
-.jumbotron p {
-  font-size: 19px;
+  display: block;
+  margin: 0 auto;
 }
 
 h3 {
   font-size: 26px;
-  font-variant: small-caps;
+  color: #990000;
 }
 
 h4 {
   font-size: 20px;
 }
-
 
 h5 {
   text-decoration: underline ;
@@ -42,13 +32,23 @@ sup {
 ul{
   list-style-type: disc;
 }
-  
-.dl-horizontal dt {
-    width:200px;
+
+table {
+  width:100%;
+}
+
+table td:first-child {
+  text-align: right;
+  white-space: nowrap;
+  padding-right: 10px;
 }
 
 .text-sedy {
   color: #999999;
+}
+
+.text-bordova {
+  color: #990000;
 }
 
 .justify {
@@ -57,41 +57,50 @@ ul{
 }
 
 .kapitalky {
-  font-size: 15px;
-  font-weight: bold;
   font-variant: small-caps;
-  color: #990000 ; 
-  margin-right: 10px;
   }
 
 .no-disc{
   list-style-type: none;
 }
 
-.jumbotron {
-  padding-bottom: 20px;
-  padding-top: 30px;
-  margin-bottom: 0px;
-  color: #ffffff;
-  background: #990000; /* Old browsers */
-  background: -webkit-radial-gradient(circle,  #cc3333 0%,#A60000 100%); /* Chrome10+,Safari5.1+ */
-  background:      -o-radial-gradient(circle, #cc3333 0%, #990000 100%); /* Opera 12+ */
-  background:         radial-gradient(circle, #cc3333 0%,#990000 100%); /* W3C */  /* Firefox 3.6+ */
-  background:    -moz-radial-gradient(circle,	#cc3333 0%, #990000 100%);
-}
+/* 1 sekce ---------------------------- 1 sekce -- jumbotron */
+  .jumbotron h1 {
+    font-size: 54px;
+  }
 
-.jumbotron a {
-  color: #fff;
-  text-decoration: none;
-}
+  .jumbotron h2 {
+    font-size: 28px;
+  }
 
-#zamest {
-margin-top: 20px;
-margin-bottom: 20px;
-}
+  .jumbotron p {
+    font-size: 19px;
+  }
 
-/* ---------------------------- horní lišta */
+  .jumbotron {
+    padding-bottom: 20px;
+    padding-top: 30px;
+    margin-bottom: 0px;
+    color: #f5f5f5;
+    background: #990000; /* Old browsers */
+    background: -webkit-radial-gradient(circle,  #cc3333 0%,#A60000 100%); /* Chrome10+,Safari5.1+ */
+    background:      -o-radial-gradient(circle, #cc3333 0%, #990000 100%); /* Opera 12+ */
+    background:         radial-gradient(circle, #cc3333 0%,#990000 100%); /* W3C */  /* Firefox 3.6+ */
+    background:    -moz-radial-gradient(circle,	#cc3333 0%, #990000 100%);
+  }
 
+  .jumbotron a {
+    color: #f5f5f5;
+    text-decoration: none;
+  }
+
+/* 2 sekce ---------------------------- 2 sekce -- zaměstnankyně EU */
+  #zamest {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
+
+/* ---------------------------- horní lišta změna barvy telefon */
   #tel span {
     -webkit-transition: all 0s;  /* Saf3.2+, Chrome */
     -moz-transition: all 0s;  /* FF4+ */
@@ -108,7 +117,7 @@ margin-bottom: 20px;
     color: #fff ;
   }
 
-/* ---------------------------- služby */
+/* 3 sekce ---------------------------- 3 sekce -- služby */
 
   .pozadi_reference {
     color: inherit;
@@ -118,17 +127,11 @@ margin-bottom: 20px;
   #sluzby {
     margin-bottom: 0px;
     padding-top:0px;
-    color: #000;
   }
-  
-  #sluzby h3 {
-    color: #990000;
-  }
-    
+
   #sluzby h4 {
-    font-variant: small-caps;
-    color: #990000;
     font-size:22px;
+    color: #990000
   }
 
   
@@ -136,6 +139,7 @@ margin-bottom: 20px;
 /* ---------------------------- reference */
   #reference {
     margin-bottom: 0px;
+    padding-bottom: 20px;
     padding-top:0px;
   }
 
@@ -148,8 +152,15 @@ margin-bottom: 20px;
 
   #reference a {
     text-decoration:none;
-    color: #222222; 
+    color: #000000; 
   } 
+
+  #reference .kapitalky {
+    font-size: 15px ;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #990000;
+  }
 
   #reference .kapitalky a {
     color: #990000; 
@@ -164,6 +175,9 @@ margin-bottom: 20px;
     font-size: 14px;
   }
 
+  label {
+    font-size: 16px;
+  }
   .modal-footer {
     text-align: left;
     margin: 0px;
@@ -176,6 +190,7 @@ margin-bottom: 20px;
 
 
   footer > .container-kontakt {
+    padding-top: 20px;
     padding-left:0px;
     padding-right:0px;
   }
@@ -189,9 +204,7 @@ margin-bottom: 20px;
 
   #kontakt h4 {
     color:  #bf3030; 
-    font-variant: small-caps;
     font-size:22px;
-  
   }
 
   #kontakt .kapitalky {
@@ -209,7 +222,6 @@ margin-bottom: 20px;
   .btn-default {
     background-color: #222222;
     border-color: #222222;
-    color: #999999;
   }
   .btn-default.active, .btn-default:active, .btn-default:focus, .btn-default:hover {
     background-color: #696969;
@@ -233,7 +245,6 @@ margin-bottom: 20px;
     border-width: 2px;
     position: relative;
     left: -20px;
-
   }
   footer #kdemenajdete{
     position: relative;

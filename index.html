@@ -2,30 +2,65 @@
 <html lang="cs-cz" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="Jana Solanská" />
+    <meta name="robots"   content="index,follow" />
+    <meta name="author"   content="Jana Solanská" />
+
+    <!-- Vzhled stránky (velikost) se přizpůsobuje rozlišení zařízení -->
+    <!-- Takže v mobilu se zobrazuje mobilová verze -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.6" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Solanská Jana | Účetnictví, zpracování mezd, daňová evidence</title>
+    
     <!-- Description - popis webu -->
     <!-- Tento text se zobrazuje ve vyhledávačích typu google -->
     <meta name="description" content="Jana Solanská. Nabízím kompletní
     zpracování a vedení daňové evidence, dále zpracování a vedení
     účetnictví pro právnické i fyzické osoby a zpracování mezd. Sídlo:
     Hamerská 15, Zubří." />
+    
     <!-- Keywords - klíčová slova -->
     <meta name="keywords" content="účetnictví, účetní, daňová evidence,
     ekonomika, DPH, daně, mzdy, mzdová účetní, peněžní deník, 
     personalistika, Zubří, jana solanská, solanská, Rožnov pod Radhoštěm" />  
-    <meta name="viewport" content="width=device-width, initial-scale=0.6" />
-    <meta name="ICBM" content="49.4630311, 18.0917572" />
-    
-    <title>Solanská Jana | Účetnictví, zpracování mezd, daňová evidence</title>
-    
+
+    <!--Souřadnice webu-->
+    <meta name="ICBM"     content="49.4630311, 18.0917572" />
+
+    <!-- CSS -->
     <link rel="stylesheet"      href="files/css/bootstrap.min.css"  type="text/css" />
     <link rel="stylesheet"      href="files/css/solanska.css"       type="text/css" />
+    
+    <!-- Favicon -->
     <link rel="shortcut icon"   href="files/img/favicon.ico"        type="image/x-icon" />
     <link rel="icon"            href="files/img/favicon.ico"        type="image/x-icon">
+
     <!-- Mapa z Mapy.cz -->
     <script type="text/javascript" src="http://api4.mapy.cz/loader.js"></script>
     <script type="text/javascript">Loader.load();</script>
+    
+    <!--Googel API-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type="text/javascript">
+      function initialize() {
+          var myLatlng = new google.maps.LatLng(49.463048,18.09184);
+          var mapOptions = {
+            zoom: 15,
+            center: myLatlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+          var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    
+          var marker = new google.maps.Marker({
+              position: myLatlng,
+              map: map,
+              title: 'Hamerská 15, Zubří'
+          });
+        }
+    
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
     <!-- Monitoring návštěvnosti -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -39,6 +74,12 @@
   </head>
 
   <body>
+    
+    <!--[if lt IE 9]>
+      <script src="files/js/html5shiv.js"></script>
+      <script src="files/js/respond.min.js"></script>
+    <![endif]-->
+    
     <div id="navigator" class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -66,7 +107,7 @@
           <p>
             Pracuji v oboru ekonomika a účetnictví již od roku 1992. V
             roce 2010 jsem se rozhodla, že zúročím své znalosti v dané
-            oblasti a začala jsem na základě živnostenského oprávnění
+            oblasti a začala jsem, na základě živnostenského oprávnění,
             nabízet své služby firmám jako externí účetní. <br />
             Vše zpracovávám dle platných legislativních zákonů, sleduji
             změny v legislativě a pravidelně se účastním školení. </p>
@@ -82,13 +123,16 @@
     </div> <!-- div o mně -->
       
     <div id="zamest" class="container margin">
+      <div class="container">
           <p>
-            V listopadu 2013 jsem přes Úřad práce, který vyhlásil projekt Odborné praxe 
-            pro mladé do 30 let ve Zlínském kraji, zaměstnala uchazečku o zaměstnání. Tento projekt je financován 
+          V listopadu 2013 jsem přes Úřad práce, který vyhlásil projekt <strong>Odborné praxe 
+
+            pro mladé do 30 let ve Zlínském kraji</strong>, zaměstnala uchazečku o zaměstnání. Tento projekt je financován 
             z 85 % z prostředků Evropského sociálního fondu prostřednictvím Operačního 
             programu Lidské zdroje a zaměstnanost a z 15 % z prostředků státního rozpočtu ČR.
           </p> 
-      <img src="files/img/logo.png" alt="logo ESF Operační program lidského rozvoje a zaměstnanosti">
+        <img src="files/img/logo.png" alt="logo ESF Operační program lidského rozvoje a zaměstnanosti">
+      </div>
     </div>
 
     <div id="sluzby" class="container margin">
@@ -162,16 +206,6 @@
       </div> <!-- div row -->
     </div> <!-- div služby -->
     
-    <div id="reference">
-      <div class="container">
-        <h3></h3>
-        <p>
-        </p> 
-
-      </div>
-      </div>
-    </div>
-
     <div id="reference" class="pozadi_reference">
       <div class="container">
         <h3>Reference</h3>
@@ -196,106 +230,99 @@
           </div>  
         </div><!-- div citace -->
 
-        <div id="dl-horizontal" class="container">
-          <dl class="dl-horizontal" >
-            <dt>
+        <table>
+          <tr>
+            <td>
               <span class="kapitalky">
                 <a href="http://www.stzu.cz" target="_blank">Nástrojárna Pečky s.r.o</a>
               </span> 
-            </dt>
-            <dd>
+            </td>
+            <td>
               <a href="http://www.stzu.cz" target="_blank"> Nabízíme
                 výrobu a opravu forem pro technickou pryž, polotovarů
                 pro formy na lisování plastů a kol pro ozubené řemeny.
                 <sup><span class="glyphicon glyphicon-new-window"></span></sup>
               </a>
-            </dd>
-            <dt>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <span class="kapitalky">
                 <a href="http://www.firmy.cz/detail/2254044-ing-jan-panc-roznov-pod-radhostem.html" target="_blank">Ing. Jan Panc</a>
               </span> 
-            </dt>
-            <dd>
+            </td>
+            <td>
               <a href="http://www.firmy.cz/detail/2254044-ing-jan-panc-roznov-pod-radhostem.html"             target="_blank">Provoz sběrného dvora. Skladování a
                 likvidace nebezpečného odpadu. Zpětný odběr
                 elektrospotřebičů. Provoz chráněné dílny.
                 <sup><span class="glyphicon glyphicon-new-window"></span></sup>
               </a>
-            </dd>
-            <dt>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <span class="kapitalky">
                 <a href="http://www.robes.cz" target="_blank">Mirko Hlucháň</a>
               </span>
-            </dt>  
-            <dd>
+            </td>  
+            <td>
               <a href="http://www.robes.cz" target="_blank">
                 Nabídka ostrahy osob a majetku i převozu peněz. Možnost
                 připojení na pult centrální ochrany.
                 <sup><span class="glyphicon glyphicon-new-window"></span></sup>
               </a>
-            </dd>
-            <dt>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <span class="kapitalky">
                 <a href="http://www.firmy.cz/detail/2486075-ing-monika-bambuchova-roznov-pod-radhostem.html" target="_blank">Ing. Monika Bambuchová</a>
               </span>
-            </dt>
-            <dd>
+            </td>
+            <td>
               <a href="http://www.firmy.cz/detail/2486075-ing-monika-bambuchova-roznov-pod-radhostem.html" target="_blank">
                 Nabízí stavební dozor, projektové práce ve výstavbě,
                 poradenskou i konzultační činnost. Provádí zpracování
                 odborných studií či posudků. 
                 <sup><span class="glyphicon glyphicon-new-window"></span></sup>
               </a>
-            </dd>
-            <dt>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <span class="kapitalky">
                 <a href="http://www.buchtara.cz/" target="_blank">Ing. Leo Buchta</a>
               </span>
-            </dt>
-            <dd> 
+            </td>
+            <td> 
               <a href="http://www.buchtara.cz/" target="_blank">
                 Výroba a prodej výrobních štítků a textilních a samolepících etiket. 
                 <sup><span class="glyphicon glyphicon-new-window"></span></sup>
               </a>
-            </dd>
-            <dt><span class="kapitalky">Pavla Pancová</span></dt>
-            <dd>Vedení obchodu s oblečením.</dd>
-          </dl>
-        </div>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="kapitalky">Pavla Pancová</span></td>
+            <td>Vedení obchodu s oblečením.</td>
+          </tr>
+          </table>
       </div>
     </div> <!-- div reference -->
 
     <footer id="kontakt" class="modal-footer">
         <div class="container container-kontakt">
-          <h3>Kontakt</h3>
           <div class="col-ls-7 col-md-7 col-sm-12 col-xs-12">
             <div class="row">
               <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                 <h4>Kontaktní údaje</h4>
                   <div id="address">
-                    <dl class="dl-horizontal hidden-xs">
-                      <dt><span class="kapitalky"></span></dt>
-                      <dd>Jana Solanská</dd>
-                      <dt><span class="kapitalky">adresa</span></dt> 
-                      <dd>Hamerská 15</dd>
-                      <dt><span class="kapitalky"></span></dt>
-                      <dd>756 54 Zubří</dd>
-                      <dt><span class="kapitalky">ič</span></dt>
-                      <dd>75375184</dd> 
-                      <dt><span class="kapitalky">tel.</span></dt> 
-                      <dd>+420 724 063 868</dd>
-                      <dt><span class="kapitalky"></span></dt>
-                      <dd></dd>
-                      <dt><span class="kapitalky">e-mail</span></dt>
-                      <dd><a href="mailto:solanska@solanska.eu">solanska@solanska.eu</a></dd>
-                      <dt><span class="kapitalky">web</span></dt>
-                      <dd><a href="http://www.solanska.eu">www.solanska.eu</a></dd>
-                    </dl>
-                    <table class="visible-xs">
+                    <table>
                       <tr><td></td><td>Jana Solanská </td></tr>
-                      <tr><td><span class="kapitalky">adresa </span></td><td>Hamerská 15, 756 54 Zubří</td></tr>
+                      <tr><td><span class="kapitalky">adresa </span></td><td>Hamerská 15</td></tr>
+                      <tr><td><span class="kapitalky"></span></td><td>756 54 Zubří</td></tr>
                       <tr><td><span class="kapitalky">ič </span></td><td>75375184</td></tr>
-                      <tr><td><span class="kapitalky">tel. </span></td><td>+420 724 063 868dt</td></tr>
+                      <tr><td><span class="kapitalky">tel. </span></td><td>+420 724 063 868</td></tr>
+                      <tr><td><span class="kapitalky"></span></td><td></td></tr>
                       <tr><td><span class="kapitalky">e-mail </span></td><td><a href="mailto:solanska@solanska.eu">solanska@solanska.eu</a></td></tr>
                       <tr><td><span class="kapitalky">web </span></td><td><a href="http://www.solanska.eu">www.solanska.eu</a></td></tr>
                     </table>
@@ -304,7 +331,7 @@
               <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                   <h4 id="kdemenajdete">Kde mě najdete</h4>
                 <div id="map-canvas" ></div>
-                  <script type="text/javascript">
+                <!--<script type="text/javascript">
                   var center = SMap.Coords.fromWGS84(18.0917572, 49.4630311);
                   var m = new SMap(JAK.gel("map-canvas"), center, 14);
                   m.addDefaultLayer(SMap.DEF_BASE).enable();
@@ -316,7 +343,7 @@
 
                   var options = {};
                   var marker = new SMap.Marker(center, "Solanska", options);
-                  layer.addMarker(marker);</script>
+                  layer.addMarker(marker);</script>-->
               </div>
             </div>
           </div>
@@ -347,7 +374,7 @@
                 </div>
                 <div class="form-group">
                   <label for="zprava" class="col-lg-3 col-md-3 col-sm-3 col-xs-3 control-label">
-                    Vaše zpráva:
+                    Zpráva:
                   </label>
                   <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">   
                     <textarea id="zprava" cols="33" rows="4" name="zprava" 
@@ -367,7 +394,7 @@
   
         <div id="paticka" class="container text-sedy">
           <p>
-            <a href="mailto:solanska@solanska.eu">&copy; 2013 Jana Solanská</a> &nbsp;|&nbsp; 
+            <a href="mailto:solanska@solanska.eu">&copy; 2014 Jana Solanská</a> &nbsp;|&nbsp; 
             <a href="mailto:magiess@volny.cz">design&amp;code: magiess</a>
           </p>
         </div> <!--div paticka -->
