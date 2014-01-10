@@ -64,6 +64,8 @@ table td:first-child {
   list-style-type: none;
 }
 
+#url {display: none;}
+
 /* 1 sekce ---------------------------- 1 sekce -- jumbotron */
   .jumbotron h1 {
     font-size: 54px;
