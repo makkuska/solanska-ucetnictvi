@@ -40,7 +40,7 @@
     </div> <!-- div navigator -->
     <?php
       //seznam mailů, na které se zpráva odesílá
-      $to = 'marketa.solanska@gmail.com';
+      $to = 'solanska@solanska.eu, marketa.solanska@gmail.com';
       $from = $_POST['odesilatel_mail'];
       //solanska@solanska.eu,
       //proměnné naplněné z formuláře
