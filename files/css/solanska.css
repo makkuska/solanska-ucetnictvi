@@ -7,7 +7,7 @@ body {
 }
   
 img {
-  width: 50%;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -121,11 +121,6 @@ table td:first-child {
 
 /* 3 sekce ---------------------------- 3 sekce -- služby */
 
-  .pozadi_reference {
-    color: inherit;
-    background-color: #d1a9a9;
-  }
-
   #sluzby {
     margin-bottom: 0px;
     padding-top:0px;
@@ -139,10 +134,14 @@ table td:first-child {
   
 
 /* ---------------------------- reference */
-  #reference {
-    margin-bottom: 0px;
+  #table {
     padding-bottom: 20px;
     padding-top:0px;
+  }
+
+  .pozadi_reference {
+    color: inherit;
+    background-color: #d1a9a9;
   }
 
   #citace {
