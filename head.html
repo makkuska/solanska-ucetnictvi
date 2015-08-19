@@ -33,14 +33,14 @@
     <link rel="icon"            href="files/img/favicon.ico"        type="image/x-icon">
     
     <!-- Mapa z Mapy.cz -->
-    <script type="text/javascript" src="http://api4.mapy.cz/loader.js"></script>
-    <script type="text/javascript">Loader.load();</script>
+    <script type="text/javascript" src="//api.mapy.cz/loader.js"></script>
+	  <script type="text/javascript">Loader.load()</script>
     
     <!--Googel API-->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script type="text/javascript">
       function initialize() {
-          var myLatlng = new google.maps.LatLng(49.463048,18.09184);
+          var myLatlng = new google.maps.LatLng(49.4634631, 18.1404067);
           var mapOptions = {
             zoom: 15,
             center: myLatlng,
@@ -51,7 +51,7 @@
           var marker = new google.maps.Marker({
               position: myLatlng,
               map: map,
-              title: 'Hamerská 15, Zubří'
+              title: 'Bezručova 2902, Rožnov p.R.'
           });
         }
     

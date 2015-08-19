@@ -34,8 +34,8 @@
           $page2 = '<br /><div class="jumbotron"><div class="container">';
           $page2 .= '<p>Omlouváme se, někde nastala chyba. Váš e-mail nebyl odeslán.</p>';
           $page2 .= '<p>Zkuste zadat požadavek znovu, zkontrolujte, že jste vyplnili všechny kolonky.';
-          $page2 .= 'V případě, že to stále nepůjde, kontaktujte nám přímo na e-mailu solanska@solanska.eu ';
-          $page2 .= 'nebo na telefonním čísle 724 063 868. Děkujeme za pochopení.</p><p>';
+          $page2 .= 'V případě, že to stále nepůjde, kontaktujte mne přímo na e-mailu solanska@solanska.eu ';
+          $page2 .= 'nebo na telefonním čísle +420 724 063 868. Děkuji za pochopení.</p><p>';
           $page2 .= '<a class="btn btn-default" href="http://www.solanska.eu">Zpět na solanska.eu</a></p>';
           $page2 .= '</div></div>';
           echo ($page2);
@@ -43,8 +43,8 @@
           mail($to,   $subjectOrig, $formMessage, $hlavicka);
           mail($from, $subjectCopy, $messageCopy, $hlavicka);
           $page3 = '<br /><div class="jumbotron"><div class="container">';
-          $page3 .= '<p>Váš mail byl úspěšně odeslán. Děkujeme za vaši zprávu či dotaz.</p>';
-          $page3 .= '<p> Po přečtení se Vám budeme snažit, co nejdříve odpovědět na mail, který jste zadali ('.$to.').</p>';
+          $page3 .= '<p>Váš mail byl úspěšně odeslán. Děkuji za vaši zprávu či dotaz.</p>';
+          $page3 .= '<p> Po přečtení se Vám budu snažit, co nejdříve odpovědět na Váš mail ('.$to.').</p>';
           $page3 .= '<p><a class="btn btn-default" href="http://www.solanska.eu">Zpět na solanska.eu</a></p>';
           $page3 .= '</div></div>';
           echo ($page3);
